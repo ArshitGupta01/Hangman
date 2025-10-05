@@ -1,5 +1,5 @@
 
-# 🤖 Hangman: AI-Powered Edition
+# Hangman: AI-Powered Edition
 
 Welcome to a modern, supercharged twist on the classic Hangman game! This isn't your average word-guessing game. It's powered by **Google's Gemini API**, which means you get a virtually infinite number of unique puzzles on any topic you can imagine.
 
@@ -9,7 +9,7 @@ Built with React, TypeScript, and Tailwind CSS, this application features a slee
 <img width="1919" height="973" alt="Screenshot 2025-10-05 025258" src="https://github.com/user-attachments/assets/b42cf645-de11-4489-a9bf-966653d42268" />
 
 
-## ✨ Key Features
+## Key Features
 
 -   **Infinite Puzzles**: Thanks to the Gemini API, new words and hints are generated on-the-fly for endless replayability.
 -   **Custom Topics**: Play with words from any topic you can think of—from "90s Bollywood Movies" to "Quantum Physics Concepts".
@@ -21,14 +21,14 @@ Built with React, TypeScript, and Tailwind CSS, this application features a slee
 -   **Modern & Responsive UI**: A clean, visually appealing interface that looks and works great on any device.
 -   **ntelligent Topic Handling**: Includes specialized logic for certain topics (like "Bollywood") to ensure higher-quality, factually accurate puzzles.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 -   **Frontend**: [React](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/)
 -   **AI Model**: [Google Gemini API](https://ai.google.dev/) (`gemini-2.5-flash`)
 -   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 -   **Dependencies**: Hosted via CDN (`@google/genai`, `react`, `react-dom`)
 
-## 🚀 Getting Started
+## Getting Started
 
 To run this project, you'll need a Google Gemini API key.
 
@@ -70,7 +70,7 @@ This is a static web application. You can serve the `index.html` file using any 
 
 3.  Open your browser and navigate to the local address provided by `serve` (e.g., `http://localhost:3000`).
 
-## 📁 File Structure
+## File Structure
 
 The project is organized into logical components and services for clarity and maintainability.
 
