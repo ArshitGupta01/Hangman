@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Hangman</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #2c3e50, #1a222c);
+      color: #ecf0f1;
+      min-height: 100vh;
+    }
+    .font-hangman {
+      font-family: 'Permanent Marker', cursive;
+    }
+    .text-shadow-custom {
+      text-shadow: 3px 3px 0px rgba(0,0,0,0.15);
+    }
+
+    .clay-panel {
+      background-color: #253241;
+      border-radius: 20px;
+      box-shadow: 
+        inset 6px 6px 10px 0 #1f2a36, 
+        inset -6px -6px 10px 0 #2b3a4c,
+        4px 4px 8px 0 rgba(0, 0, 0, 0.3);
+      padding: 1.5rem;
+    }
+
+    .clay-button {
+      background-color: #2c3e50;
+      border: none;
+      box-shadow: 
+        -5px -5px 10px #364d63,
+        5px 5px 10px #22303e;
+      transition: all 0.1s ease-in-out;
+    }
+    .clay-button:active {
+      box-shadow: 
+        inset -3px -3px 7px #364d63,
+        inset 3px 3px 7px #22303e;
+    }
+    .clay-button.active {
+       background-color: #1f2a36; /* Darker background for active state */
+       box-shadow: 
+        inset -3px -3px 7px #2c3e50,
+        inset 3px 3px 7px #1a222c;
+    }
+    .clay-button.inactive {
+       box-shadow: 
+        inset -3px -3px 7px #364d63,
+        inset 3px 3px 7px #22303e;
+      opacity: 0.5;
+      color: #95a5a6;
+    }
+
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up {
+      animation: fade-in-up 0.5s ease-out forwards;
+    }
+
+    @keyframes pulse-red {
+      0%, 100% { transform: scale(1); text-shadow: 3px 3px 0px rgba(231, 76, 60, 0.4); }
+      50% { transform: scale(1.05); text-shadow: 4px 4px 8px rgba(231, 76, 60, 0.7); }
+    }
+    .animate-pulse-red {
+        animation: pulse-red 1.5s ease-in-out infinite;
+    }
+
+    @keyframes slide-in-bottom {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide-in-bottom {
+        animation: slide-in-bottom 0.8s ease-out forwards;
+        animation-delay: 0.3s;
+        opacity: 0;
+    }
+
+    @keyframes shake-and-flash {
+        0% { transform: translateX(0); filter: drop-shadow(0 0 0 transparent); }
+        10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90% {
+            transform: translateX(calc(5px * (1 - 2 * (1 & 2))));
+        }
+        30% { filter: drop-shadow(0 0 15px rgba(231, 76, 60, 0.8)); }
+        70% { filter: drop-shadow(0 0 0 transparent); }
+        100% { transform: translateX(0); }
+    }
+    .animate-shake-and-flash {
+        animation: shake-and-flash 0.3s ease-in-out;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.22.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
