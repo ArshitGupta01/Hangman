@@ -5,7 +5,8 @@ Welcome to a modern, supercharged twist on the classic Hangman game! This isn't 
 
 Built with React, TypeScript, and Tailwind CSS, this application features a sleek, responsive "claymorphism" design, engaging animations, and a dynamic gameplay experience that keeps you coming back for more.
 
-![image](https://storage.googleapis.com/aistudio-project-co-lab-assets/681711202407/2024-07-22T02_09_53.259Z.png)
+
+<img width="1919" height="973" alt="Screenshot 2025-10-05 025258" src="https://github.com/user-attachments/assets/b42cf645-de11-4489-a9bf-966653d42268" />
 
 
 ## ✨ Key Features
